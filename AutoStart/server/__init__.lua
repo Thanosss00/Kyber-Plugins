@@ -16,7 +16,7 @@ end
 You can also do it with a delay
 if CountHumans >= 1 then
     Console.Execute("Kyber.Broadcast Starting in 10 seconds")
-    SetTimeout(function)
+    SetTimeout(function()
         Console.Execute("startgame")
     end, 10.0) -- 10 seconds
 else 
