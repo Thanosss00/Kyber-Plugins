@@ -28,7 +28,7 @@ end
 EventManager.Listen("Level:Loaded", function(level, mode)
     ResetVotes()
     SetTimeout(function()
-        Broadcast("Type /skip to vote to skip the current map.")
+        Broadcast("Type !skip to vote to skip the current map.")
     end, 20.0)
 end)
 
@@ -42,7 +42,7 @@ EventManager.Listen("ServerPlayer:SendMessage", function(player, message)
 
     if #messageSplit <= 0 then return end
     if messageSplit[1]:len() < 3 then return end
-    if messageSplit[1]:sub(1, 1) ~= '/' then return end
+    if messageSplit[1]:sub(1, 1) ~= '!' then return end
 
     local command = messageSplit[1]:lower():sub(2)
     EventManager.SetCancelled(true)

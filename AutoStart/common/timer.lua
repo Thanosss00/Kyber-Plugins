@@ -50,6 +50,6 @@ end
 
 return {
     Timer = Timer,
-    SetTimeout = SetTimeout
+    SetTimeout = SetTimeout,
     SetInterval = SetInterval
 }
